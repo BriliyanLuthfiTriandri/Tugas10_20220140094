@@ -1,0 +1,59 @@
+*{
+    padding: 0;
+    top: 0;
+    right: 0;
+}
+
+body{
+    text-align: justify;
+    font-family: sans-serif;
+    background-image: url('back.jpg');
+    background-size: cover; 
+    background-position: center; 
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Set tinggi minimum body sebesar tinggi viewport */
+    margin: 0; /* Hapus margin bawaan */
+    padding: 0; /* Hapus padding bawaan */
+}
+
+p{
+    text-align: center;
+}
+
+section {
+    background-color: #fcb0b1; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    padding: 20px;
+    margin: 300px auto;
+    max-width: 500px; 
+    flex: 1;
+}
+.box {
+    text-align: center; 
+    margin-bottom: 20px;
+}
+h3 {
+    color: black; 
+}
+.btn {
+    text-align: center; 
+}
+.back, a{
+    margin-top: 5px;
+    background-color: aqua;
+    color: black;
+    text-decoration: none;
+    width: 70px;
+    height: 40px;
+    border: transparent;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: black; 
+    color:#fcb0b1;
+    text-align: center; 
+    padding: 10px 0; 
+}

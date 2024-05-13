@@ -1,0 +1,37 @@
+.back, a{
+    margin-top: 5px;
+    background-color: aqua;
+    color: black;
+    text-decoration: none;
+    width: 70px;
+    height: 40px;
+    border: transparent;
+    border-radius: 5px;
+}
+
+body{
+    background-image: url('back.jpg');
+    background-size: cover; 
+    background-position: center; 
+    
+}
+
+h3{
+    text-align: center;
+    color: black;
+}
+
+h2{
+    color: blueviolet;
+}
+
+footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color:#fcb0b1; 
+    text-align: center; 
+    padding: 10px 0; 
+}
