@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata - Form</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <form id="biodataForm">
+        <fieldset>
+            <legend><b>PENGISIAN BIODATA</b></legend>
+
+            <p>Nama : <input type="text" name="Nama"></p>
+            <p>Alamat : <input type="text" name="Alamat"></p>
+            <p>Password : <input type="password" name="Password"></p>
+            <p>Tempat-Tanggal Lahir : <input type="text" name="Tempat-Tanggal Lahir"></p>
+
+            <p>
+                Jenis Kelamin :
+                <input type="radio" name="Jenis Kelamin" value="laki-laki" />
+                    Laki-Laki
+                <input type="radio" name="Jenis Kelamin" value="perempuan"/>
+                    Perempuan
+                <input type="radio" name="Jenis Kelamin" value="Ganda Campuran"/>
+                    Ganda Campuran
+            </p>
+            <p>
+                Bahasa Pemrograman yang Dikuasai : <br>
+                    <input type="checkbox" name="web"> Website
+                    <input type="checkbox" name="mobile"> Mobile
+                    <input type="checkbox" name="desk"> Desktop
+                    <input type="checkbox" name="isyarat"> Isyarat
+            </p>
+            <p>
+                Kota Asal :
+                <select name="Kota_Asal">
+                    <option></option>
+                    <option>Yogyakarta</option>
+                    <option>Semarang</option>
+                    <option>Bandung</option>
+                    <option>Solo</option>
+                    <option>Jakarta</option>
+                </select>
+            </p>
+            <p>
+                Berikan Alasan dan Quote, Megapa Bumi itu diciptakan? <br>
+                <textarea rows="10" cols="50" name="Alasan" placeholder="Jawab disini & jawaban terbaik akan mendapatkan sanksi"></textarea>
+            </p>
+            <p><input type="submit" value="Submit"></p>
+        </fieldset>
+    </form>
+
+    <button class="back"><a href="index.html"><b>Home</b></a></button>
+    <button class="back"><a href="about_me.html"><b>About</b></a></button>
+    <button class="back"><a href="hobi.html"><b>Hobi</b></a></button>
+
+    <footer role="contentinfo" aria-label="Footer" class="footer">
+        <div class="container-footer">
+            <p><b>TIDAK ADA YANG BISA DIHARAPKAN</b></p>
+            <p><b>Copyright &copy; untiltheend</b></p>
+        </div>
+    </footer>
+
+    <script>
+        var form = document.getElementById("biodataForm");
+    
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+    
+            var formData = new FormData(form);
+            var formValues = {};
+            for (var pair of formData.entries()) {
+                formValues[pair[0]] = pair[1];
+            }
+    
+            var resultContainer = document.createElement("div");
+            resultContainer.classList.add("result-container"); 
+            resultContainer.innerHTML = "<h2>Hasil Pengisian Biodata:</h2>";
+            for (var key in formValues) {
+                resultContainer.innerHTML += "<p>" + key + ": " + formValues[key] + "</p>";
+            }
+            document.body.appendChild(resultContainer);
+        });
+    </script>
+</body>
+</html>
